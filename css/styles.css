@@ -1,5 +1,11 @@
+:root {
+    --main-title-color: #2E2F42;
+    --main-text-color:#434455;
+    --main-background-color: #2E2F42;
+    --main-highlight-color: #404BBF;
+}
+
 body {
-    color: #434455;
     font-family: "Roboto", sans-serif;
     }
 
@@ -14,7 +20,6 @@ body {
 
 .header {
     font-size: 16px;
-    color: #2E2F42;
     line-height: 1.5;
 }
 
@@ -43,29 +48,32 @@ body {
 .header-navigation {
     font-family: inherit;
     font-size: 16px;
-    }
+        }
 
 .header-list {
     font-weight: 700;
 }
 
-.head-item {
+.header-item {
 
 }
 
 .header-link {
+    font-family: inherit;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    color: var(--main-title-color);
 }
 
-.header-link:active {
-    color: #404BBF;
+.header-link:active,
+.header-link:hover,
+.header-link:focus {
+    color: var(--main-highlight-color);
 }
 
 .header-contact {
-    font-family: 'Roboto', sans-serif;
+    font-family: inherit;
     font-weight: 400;
 }
 
@@ -77,11 +85,11 @@ body {
 }
 
 .header-mail:active {
-    color: #404BBF;
+    color: var(--main-highlight-color);
 }
 .header-mail:hover,
 .header-mail:focus{
-    color: #404BBF;
+    color: var(--main-highlight-color);
 }
 
 .header-tel {
@@ -94,7 +102,7 @@ body {
 
 .header-tel:hover,
 .header-tel:focus{
-    color: #404BBF;
+    color: var(--main-highlight-color);
 }
 
 /* Main informaition and service order*/
@@ -102,7 +110,7 @@ body {
 .order {
     font-family: inherit;
     color: #FFFFFF;
-    background: #2E2F42;
+    background: var(--main-background-color);
     }
 .order-title {
     font-size: 56px;
@@ -111,7 +119,7 @@ body {
     letter-spacing: 0.02em;
 }
 .order-btn {
-    font-family: "Roboto", sans-serif;
+    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.19;
@@ -125,10 +133,11 @@ body {
     align-items: center;
     }
 
-.order-btn:active {
-    background: #404BBF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+.order-btn:active,
+.order-btn:hover,
+.order-btn:focus {
+    background: var(--main-highlight-color);
+    
 }
 
 /*--------Soft skils--------*/
@@ -140,14 +149,14 @@ body {
 
 }
 .skils-item {
-    
+
 }
 .skils-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2; 
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    color: var(--main-title-color);
 }
 .skils-text {
     font-size: 16px;
@@ -165,12 +174,14 @@ body {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: #2E2F42;
+    color: var(--main-text-color);
 }
 .service-list {
 }
 .service-item {
-}
+    display: inline-block;
+    vertical-align: top;
+    }
 
 /*--------Team card--------*/
 
@@ -183,7 +194,7 @@ body {
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: #2E2F42
+    color: var(--main-title-color);
 }
 
 .team-list {
@@ -195,6 +206,8 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .team-name {
@@ -203,7 +216,7 @@ body {
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #2E2F42;
+    color: var(--main-title-color);
 }
 
 .team-position {
@@ -211,12 +224,13 @@ body {
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
+    color: var(--main-text-color);
     }
 
     /*--------Footer--------*/
 
 .footer {
-    background: #2E2F42;
+    background: var(--main-background-color);
 }
 .footer-box {
 }
@@ -242,8 +256,88 @@ body {
 }
 
 .footer-text {
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #E7E9FC;
+}
+
+/*--------------PORTFOLIO--------------*/
+
+/*------filter section-----*/
+.filter{
+
+}
+
+.filter-list{
+
+}
+
+.filter-item{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.filter-btn{
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #4D5AE5;
+    cursor: pointer;
+/* ------box btn style----- */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    height: 48px;
+    background: #F4F4FD;
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;   
+}
+
+.filter-btn:hover,
+.filter-btn:focus,
+.filter-btn:active {
+    color: #FFFFFF;
+    background: var(--main-highlight-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+/*------ row-----*/
+
+.row {
+}
+.row-list {
+}
+
+.row-item {
+    background: #FFFFFF;
+    border: 0.5px solid #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    display: inline-block;
+    vertical-align: top;
+}
+.row-about {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--main-title-color);
+}
+.row-text {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
 }
